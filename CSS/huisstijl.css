@@ -74,6 +74,15 @@ li {
   align-self: center;
 }
 
+#firstdates nav ul li a {
+  color: black;
+}
+
+#firstdates nav ul li a:hover {
+  color: grey;
+  border-bottom: 1px grey solid;
+}
+
 @media (max-width: 90em) {
   header nav a img {
     width: 15vh;
@@ -139,7 +148,6 @@ article div {
 
 .fotomeandtext {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   height: 80vh;
 }
@@ -168,6 +176,11 @@ article div {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 200;
   color: white;
+}
+
+.iam {
+  display: flex;
+  flex-direction: column;
 }
 
 .iam p {
@@ -242,9 +255,8 @@ section article:nth-last-of-type(1):hover {
   }
 
   .fotomeandtext {
-    display: flex;
     flex-direction: column;
-}
+  }
 }
 
 @media (max-width: 52em) {
@@ -273,7 +285,6 @@ section article:nth-last-of-type(1):hover {
 @media (max-width: 30em) {
   .fotomeandtext {
     display: flex;
-    flex-wrap: wrap;
   }
 
   .content-items {
@@ -298,7 +309,7 @@ section article:nth-last-of-type(1):hover {
 CONTENT PAGEs
 ***********************
 ***********************/
-.firstdates {
+main article {
   display: flex;
 }
 
@@ -424,7 +435,7 @@ EINDE FOTO VERGROTER
   height: auto;
 }
 
-.firstdatepic {
+ .firstdatespiccontainer img{
   width: 100%;
   height: 50vw;
   object-fit: contain;
@@ -532,31 +543,77 @@ EINDE FOTO VERGROTER
   }
 }
 
-
-
 /**********************
 ***********************
 SVG
 ***********************
 ***********************/
-
 #Layer_1 {
-  width: 200px;
-height: 200px;
-marging-bottom: 0px;
-
+  width: 13em;
+  height: 13em;
+  marging-bottom: 0px;
+  padding: 1em;
+  align-self: center;
 }
-.st0{fill:#FFED00;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
-.st1{fill:#FCEA10;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
-.st2{fill:#DADADA;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
-.st3{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
-.st4{fill:none;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
-.st5{fill:none;stroke:#1D1D1B;stroke-width:22;stroke-miterlimit:10;}
 
-.st6{fill:#BFA802;}
-.st7{opacity:0.59;fill:#BFA802;}
-.st8{fill:#878787;}
-.st9{fill:#685900;}
+.st0 {
+  fill: #FFED00;
+  stroke: #1D1D1B;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+}
+
+.st1 {
+  fill: #FCEA10;
+  stroke: #1D1D1B;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+}
+
+.st2 {
+  fill: #DADADA;
+  stroke: #1D1D1B;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+}
+
+.st3 {
+  fill: #1D1D1B;
+  stroke: #1D1D1B;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+}
+
+.st4 {
+  fill: none;
+  stroke: #1D1D1B;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+}
+
+.st5 {
+  fill: none;
+  stroke: #1D1D1B;
+  stroke-width: 22;
+  stroke-miterlimit: 10;
+}
+
+.st6 {
+  fill: #BFA802;
+}
+
+.st7 {
+  opacity: 0.59;
+  fill: #BFA802;
+}
+
+.st8 {
+  fill: #878787;
+}
+
+.st9 {
+  fill: #685900;
+}
 
 /**********************
 ***********************
@@ -604,7 +661,8 @@ fieldset {
 @media(max-width: 90em) {
   footer section {
     display: flex;
-    flex-direction: row;
+    flex-flow: wrap;
+    row;
   }
 }
 
@@ -646,29 +704,7 @@ fieldset {
   }
 }
 
-@media (max-width: 27em) {
-  .firstdatestext {
-    position: relative;
-    max-height: 60vh;
-    width: 100vw;
-    overflow: auto;
-  }
-
-  .firstdatestext {
-    padding: 0em;
-  }
-
-  .fotoitemcontainer {
-    width: 100vw;
-    height: auto;
-  }
-
-  .fotoitems {
-    width: 90%;
-    height: auto;
-    object-fit: contain;
-  }
-}
+@media (max-width: 27em) {}
 
 /**********************
 BRONNEN :
