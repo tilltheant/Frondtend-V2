@@ -564,10 +564,26 @@ SVG
 }
 
 .st1 {
-  fill: #FCEA10;
+  fill: black;
   stroke: #1D1D1B;
   stroke-width: 9;
   stroke-miterlimit: 10;
+  animation: lichtbulb 5s infinite;
+}
+@keyframes lichtbulb {
+
+  50% {  fill:#FCEA10  } /* Turn off */
+  50.001% { fill: black; }
+  /* Keep off state for a short period */
+
+  51.999% { fill: black; } /* Turn back on */
+  53% { fill:#FCEA10 }
+  54% {  fill:#FCEA10  } /* Turn off */
+  54.001% { fill: black; }
+  /* Keep off state for a short period */
+
+  55.999% { fill: black; } /* Turn back on */
+  56% { fill:#FCEA10 }
 }
 
 .st2 {
