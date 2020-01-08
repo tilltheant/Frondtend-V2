@@ -1,0 +1,681 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/**************************************
+***************************************
+BEGIN NAVIGATOR
+**************************************
+**************************************/
+header {
+  top: 0;
+  opacity: 100%;
+}
+
+header, main {
+  animation: drop 1.5s ease;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'DM Sans', sans-serif;
+  margin-right: auto;
+  padding: 0.5em;
+}
+
+nav ul li a {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  transition: 0.2s;
+  font-size: 1.2em;
+}
+
+nav ul li a:hover {
+  color: black;
+  border-bottom: solid 1px black;
+  transition: 0.2s;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav {
+  display: flex;
+}
+
+li {
+  padding: 1em;
+  align-self: center;
+}
+
+@media (max-width: 90em) {
+  header nav a img {
+    width: 15vh;
+    height: 15vh;
+    object-fit: contain;
+    padding-left: 1em;
+  }
+}
+
+@media (max-width: 48em) {
+  header nav a img {
+    width: 15vh;
+    height: 15vh;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 27em) {
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    padding: 0.5em;
+  }
+}
+
+/************************
+*************************
+CONTENT items Mainpage
+**************************
+*************************/
+main article a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+article a {
+  width: 50%;
+  height 50%;
+  padding: 1rem;
+}
+
+article h1 {
+  padding: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+article a h2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  font-family: 'DM Sans', sans-serif;
+  padding: 1rem;
+}
+
+article div {
+  align-self: center;
+}
+
+.fotomeandtext {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 80vh;
+}
+
+.bgimg {
+  background-image: url(/images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* BRON https://codepen.io/haaswill/pen/VKzXvZ*/
+#word {
+  border-right: solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.textme>p {
+  font-size: 3rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 200;
+  color: white;
+}
+
+.iam p {
+  font-size: 4rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+section h1 {
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+section h2 {
+  text-align: center;
+  padding: 1em;
+}
+
+.content-items {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+  padding: 1.5em;
+  margin: 1em;
+  background-color: rgba(255, 255, 255, .8);
+  border-radius: 5%;
+}
+
+.content-items:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+section article:nth-last-of-type(4):hover {
+  background: rgb(238, 172, 101);
+  background: radial-gradient(circle, rgba(238, 172, 101, 0.7) 2%, rgba(133, 178, 165, 0.7) 42%, rgba(22, 184, 234, 0.7) 81%);
+}
+
+section article:nth-last-of-type(3):hover {
+  background: rgb(34, 193, 195);
+  background: radial-gradient(circle, rgba(34, 193, 195, 0.7) 11%, rgba(253, 187, 45, 0.7) 92%);
+}
+
+section article:nth-last-of-type(2):hover {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(circle, rgba(63, 94, 251, 0.7) 0%, rgba(252, 70, 107, 0.7) 100%);
+}
+
+section article:nth-last-of-type(1):hover {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, 0.7) 0%, rgba(148, 187, 233, 0.7) 100%);
+}
+
+@media(max-width: 90em) {
+  .content-items {
+    width: 100vh;
+    height: auto;
+    padding: 0;
+  }
+
+  article a div img {
+    width: 100%;
+    height: 10vw;
+    object-fit: contain;
+  }
+
+  .container-items {
+    display: flex;
+  }
+
+  .fotomeandtext {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media (max-width: 52em) {
+  .fotomeandtext {
+    margin: 1em;
+  }
+
+  .content-items {
+    width: 40vh;
+    height: auto;
+  }
+
+  .container-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  article a div img {
+    width: 100%;
+    height: 20vw;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 30em) {
+  .fotomeandtext {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content-items {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+  }
+
+  article a div img {
+    width: 100%;
+    height: 50vw;
+    object-fit: contain;
+  }
+
+  .textme>p {
+    font-size: 2rem;
+  }
+}
+
+/**********************
+***********************
+CONTENT PAGEs
+***********************
+***********************/
+.firstdates {
+  display: flex;
+}
+
+#firstdates h1 {
+  align-self: center;
+  order: 2;
+  border-bottom: solid;
+}
+
+#firstdates h2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.fotoitemcontainer {
+  width: 50vw;
+  height: auto;
+}
+
+.fotoitemcontainer img {
+  display: block;
+  margin: 0 auto;
+}
+
+.fotoitemcontainer figcaption {
+  text-align: center;
+}
+
+/*******************************
+*******************************
+BEGIN FOTO vergroten voor detailpagina
+********************************
+********************************/
+.fotoitems {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fotoitems:hover {
+  opacity: 0.3;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding-top: 7em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 42em;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 43em;
+  text-align: center;
+  color: #ccc;
+  padding: 2em 0;
+  height: 9em;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 1em;
+  right: 2.5em;
+  color: #f1f1f1;
+  font-size: 2.5em;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/**********************
+***********************
+EINDE FOTO VERGROTER
+***********************
+***********************/
+.firstdatespiccontainer {
+  width: 40vw;
+  height: auto;
+}
+
+.firstdatepic {
+  width: 100%;
+  height: 50vw;
+  object-fit: contain;
+}
+
+.firstdatestext {
+  position: relative;
+  max-height: 50vh;
+  width: 50vh;
+  overflow: auto;
+}
+
+@media(max-width: 90em) {
+  .firstdates {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #firstdates h1 {
+    grid-column-start: 1;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 3;
+    justify-self: center;
+    font-weight: 900;
+  }
+
+  .firstdatepic {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 2em;
+    justify-self: start;
+  }
+
+  .firstdatestext {
+    position: relative;
+    max-height: 50vw;
+    width: 60vw;
+    overflow: auto;
+    padding: 2em;
+  }
+}
+
+@media (max-width: 48em) {
+  .firstdates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #firstdates h1 {
+    align-self: flex-start;
+    order: 2;
+  }
+
+  .firstdatestext {
+    position: relative;
+    max-height: 60vh;
+    width: 90vw;
+    overflow: auto;
+    order: 3;
+    padding: 1em;
+  }
+
+  .firstdatepic {
+    width: 100%;
+    height: 40vw;
+    object-fit: contain;
+  }
+
+  .fotoitemcontainer {
+    width: 80vw;
+    height: auto;
+  }
+
+  .fotoitems {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 27em) {
+  .firstdatestext {
+    position: relative;
+    max-height: 60vh;
+    width: 100vw;
+    overflow: auto;
+  }
+
+  .firstdatestext {
+    padding: 0em;
+  }
+
+  .fotoitemcontainer {
+    width: 100vw;
+    height: auto;
+  }
+
+  .fotoitems {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+
+
+/**********************
+***********************
+SVG
+***********************
+***********************/
+
+#Layer_1 {
+  width: 200px;
+height: 200px;
+marging-bottom: 0px;
+
+}
+.st0{fill:#FFED00;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
+.st1{fill:#FCEA10;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
+.st2{fill:#DADADA;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
+.st3{fill:#1D1D1B;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
+.st4{fill:none;stroke:#1D1D1B;stroke-width:9;stroke-miterlimit:10;}
+.st5{fill:none;stroke:#1D1D1B;stroke-width:22;stroke-miterlimit:10;}
+
+.st6{fill:#BFA802;}
+.st7{opacity:0.59;fill:#BFA802;}
+.st8{fill:#878787;}
+.st9{fill:#685900;}
+
+/**********************
+***********************
+footer
+***********************
+***********************/
+footer {
+  background-color: #34495E;
+}
+
+form {
+  padding: 2em;
+}
+
+footer h1 {
+  border-bottom: none;
+  background-color: #34495E;
+  color: white;
+  text-align: left;
+  padding-bottom: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 1em;
+}
+
+#textveld {
+  display: block;
+}
+
+label {
+  padding: 0.5em;
+  color: white;
+  font-family: 'DM sans', sans-serif;
+}
+
+legend {
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+fieldset {
+  border: none;
+}
+
+@media(max-width: 90em) {
+  footer section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 48em) {
+  .firstdates {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #firstdates h1 {
+    align-self: flex-start;
+    order: 2;
+  }
+
+  .firstdatestext {
+    position: relative;
+    max-height: 60vh;
+    width: 90vw;
+    overflow: auto;
+    order: 3;
+    padding: 1em;
+  }
+
+  .firstdatepic {
+    width: 100%;
+    height: 40vw;
+    object-fit: contain;
+  }
+
+  .fotoitemcontainer {
+    width: 80vw;
+    height: auto;
+  }
+
+  .fotoitems {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 27em) {
+  .firstdatestext {
+    position: relative;
+    max-height: 60vh;
+    width: 100vw;
+    overflow: auto;
+  }
+
+  .firstdatestext {
+    padding: 0em;
+  }
+
+  .fotoitemcontainer {
+    width: 100vw;
+    height: auto;
+  }
+
+  .fotoitems {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/**********************
+BRONNEN :
+https://www.w3schools.com/howto/howto_css_modal_images.asp (fotovergroter)
+https://stackoverflow.com/questions/1225130/how-can-i-align-text-directly-beneath-an-image (figcaption en figure)
+https://codepen.io/sdthornton/pen/wBZdXq
+https://css-tricks.com/snippets/css/complete-guide-grid/
+https://cssgradient.io/blog/css-gradient-examples/
+https://stackoverflow.com/questions/5135019/css-opacity-only-to-background-color-not-the-text-on-it
+**********************/
