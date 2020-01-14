@@ -176,7 +176,6 @@ article div {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 200;
   color: white;
-
 }
 
 .iam {
@@ -436,7 +435,7 @@ EINDE FOTO VERGROTER
   height: auto;
 }
 
- .firstdatespiccontainer img{
+.firstdatespiccontainer img {
   width: 100%;
   height: 50vw;
   object-fit: contain;
@@ -578,22 +577,49 @@ SVG
 }
 
 .st1:hover {
-  fill:yellow;
+  fill: yellow;
 }
+/**********************
+https://9elements.com/blog/creating-an-animated-svg-neon-light-effect/
+***********************/
 @keyframes lichtbulb {
+  50% {
+    fill: #FCEA10
+  }
 
-  50% {  fill:#FCEA10  } /* Turn off */
-  50.001% { fill: black; }
+  /* Turn off */
+  50.001% {
+    fill: black;
+  }
+
   /* Keep off state for a short period */
+  51.999% {
+    fill: black;
+  }
 
-  51.999% { fill: black; } /* Turn back on */
-  53% { fill:#FCEA10 }
-  54% {  fill:#FCEA10  } /* Turn off */
-  54.001% { fill: black; }
+  /* Turn back on */
+  53% {
+    fill: #FCEA10
+  }
+
+  54% {
+    fill: #FCEA10
+  }
+
+  /* Turn off */
+  54.001% {
+    fill: black;
+  }
+
   /* Keep off state for a short period */
+  55.999% {
+    fill: black;
+  }
 
-  55.999% { fill: black; } /* Turn back on */
-  56% { fill:#FCEA10 }
+  /* Turn back on */
+  56% {
+    fill: #FCEA10
+  }
 }
 
 .st2 {
@@ -611,7 +637,7 @@ SVG
 }
 
 .st3:hover {
-  fill: #FCEA10 ;
+  fill: #FCEA10;
   stroke: #1D1D1B;
 }
 
@@ -645,6 +671,28 @@ SVG
 .st9 {
   fill: #685900;
 }
+  /* https://codepen.io/pulpexploder/pen/ypYXwb */
+
+.yes {
+  animation: spring 1.5s infinite;
+  animation-name: spring;
+  animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+.p {
+  cursor: pointer;
+}
+
+    @keyframes spring {
+        0%   { transform: scale(1,1)      translateY(0); }
+        10%  { transform: scale(1.1,.9)   translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-100px); }
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        57%  { transform: scale(1,1)      translateY(-7px); }
+        64%  { transform: scale(1,1)      translateY(0); }
+        100% { transform: scale(1,1)      translateY(0); }
+    }
+
 
 /**********************
 ***********************
@@ -653,10 +701,6 @@ footer
 ***********************/
 footer {
   background-color: #34495E;
-}
-
-form {
-  padding: 2em;
 }
 
 footer h1 {
@@ -673,10 +717,64 @@ footer h1 {
   display: block;
 }
 
+form {
+  padding: 2em;
+}
+
+input {
+  border: none;
+  background-color: #ff9999;
+}
+
+input:valid {
+  border-color: green;
+  background-color: #99e699;
+}
+
+input:invalid {
+  border-color: red;
+  background-color: #ff9999;
+}
+
+input:focus {
+  border-color: orange;
+  background-color: #ffbf80;
+}
+
 label {
-  padding: 0.5em;
+  padding: 0.6em;
   color: white;
   font-family: 'DM sans', sans-serif;
+}
+
+button {
+  font-size: 1.25em;
+  flex: 0 0 2em;
+  transition: all .2s 1s;
+  opacity: 0;
+  width: 6em;
+}
+
+form:valid button {
+  opacity: 1
+}
+
+button:focus {
+  transform: scale(1.1, 1.1);
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+}
+
+input[type=email],
+input[type=date] {
+  width: auto;
+}
+
+input[type=radio]:focus{
+  background-color: orange;
 }
 
 legend {
@@ -686,56 +784,32 @@ legend {
 }
 
 fieldset {
-  border: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  border-right: solid 2px grey;
 }
 
 @media(max-width: 90em) {
   footer section {
     display: flex;
     flex-flow: wrap;
-    row;
   }
 }
 
 @media (max-width: 48em) {
-  .firstdates {
+  footer section {
     display: flex;
-    flex-direction: column;
-  }
-
-  #firstdates h1 {
-    align-self: flex-start;
-    order: 2;
-  }
-
-  .firstdatestext {
-    position: relative;
-    max-height: 60vh;
-    width: 90vw;
-    overflow: auto;
-    order: 3;
-    padding: 1em;
-  }
-
-  .firstdatepic {
-    width: 100%;
-    height: 40vw;
-    object-fit: contain;
-  }
-
-  .fotoitemcontainer {
-    width: 80vw;
-    height: auto;
-  }
-
-  .fotoitems {
-    width: 90%;
-    height: auto;
-    object-fit: contain;
+    flex-flow: wrap;
   }
 }
 
-@media (max-width: 27em) {}
+@media (max-width: 27em) {
+  footer section {
+    display: flex;
+    flex-flow: wrap column-reverse;
+  }
+}
 
 /**********************
 BRONNEN :

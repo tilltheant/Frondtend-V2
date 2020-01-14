@@ -25,7 +25,7 @@
 
           <?xml version="1.0" encoding="utf-8"?>
           <!-- SVG CODE   -->
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 550.11 770.16" style="enable-background:new 0 0 550.11 770.16;" xml:space="preserve">
+          <svg version="1.1" id="Layer_1" class="yes" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 550.11 770.16" style="enable-background:new 0 0 550.11 770.16;" xml:space="preserve">
             <path class="st0" d="M282.79,522.23c84.96-70.57,157.11-99.92,172.75-77.44c4.04,5.8,11.58,25.5,13.36,47.5
 	c0.48,5.93,0.41,14.46,0.28,31.52c-0.12,15.67-0.19,23.51-0.88,31.95c-1.25,15.14-4.4,33.63-6.96,39.3
 	c-10.15,22.45-83.85,4.77-176.22-39.3" />
@@ -96,7 +96,7 @@
 	c-10.92,9.17-8.05,26.7-7.21,26.83c0.73,0.12,0.26-13.12,9.37-20.36c2.3-1.83,6.18-4.04,10.85-5.06c2.93-0.64,3.82-0.29,9.84-0.74
 	C124.84,452.16,129.61,451.81,129.72,450.82z" />
           </svg>
-          <p>I am Anthony</p>
+          <p class="p">I am Anthony</p>
         </div>
         <div class="textme">
           <p id="word"><span></span></p>
@@ -147,35 +147,45 @@
     <h1>Contact</h1>
     <section>
       <div>
+
+
+
         <form action="index.html">
           <fieldset>
-            <legend>Persoonsgegevens.</legend>
-            <label id="textveld"> Naam:
-              <input required type="text">
+            <legend>Persoonsgegevens</legend>
+            <label id="textveld"> Voornaam:
+              <input required type="text" tabindex="1">
             </label>
 
             <label id="textveld"> Achternaam:
-              <input required type="text">
+              <input required type="text" tabindex="2">
             </label>
             <label>Man
-              <input type="radio" name="switch-one" value="no">
+              <input type="radio" name="geslacht" value="man" tabindex="3">
             </label>
             <label>Vrouw
-              <input type="radio" name="switch-one" value="no">
+              <input type="radio" name="geslacht" value="vrouw" tabindex="4">
             </label>
 
             <label>Anders
-              <input type="radio" name="switch-one" value="no">
+              <input type="radio" name="geslacht" value="anders" tabindex="5">
             </label>
 
             <label id="textveld"> Geboortedatum:
-              <input type="date">
+              <input type="date" min="1990-04-01" required tabindex="6">
             </label>
-          </fieldset>
-          <fieldset>
-            <legend>VisVoer</legend>
-          </fieldset>
 
+            <label>E-mail:
+              <input type="email" "@" required tabindex="7">
+            </label>
+
+            <label id="textveld" class="feedback"> Geef je feedback
+              <textarea id="groter" spellcheck="true" tabindex="8" class="feedback" tabindex="5"></textarea>
+            </label>
+
+
+          </fieldset>
+          <button class="invul">Verstuur</button>
         </form>
       </div>
 
@@ -187,6 +197,7 @@
     </section>
   </footer>
   <script src="JS/typewriter.js"></script>
+  <script src="JS/magic.js"></script>
   <!---
                <div class="textboxme">
             <h1 class="headtext">Born in 1994. Raised in Amsterdam. Working on my Bachelor Degree in Applied science.</h1>
@@ -196,42 +207,6 @@
 
             <p>I am like an color pallete with ever changing colors. Enthusiasm like a cheerleader, and a ray of positive energy like the sun on your skin after good night sleep. </p>
             </div>
-
-
-               <section>
-                <h1>Projects.</h1>
-                <div class="container-items">
-                    <article class="content-items">
-                        <a href="#">
-                            <div class="imagecontainer"><img src="images/ninjawarrior.jpg" alt=""></div>
-                            <div class="text-box">
-                                <h2>Ninja Warrior.</h2>
-                                <p>App ontwerp voor het bekende Tv-programma Ninja warrior.</p>
-                            </div>
-                        </a>
-                    </article>
-                    <article class="content-items">
-                        <a href="#">
-                            <div class="imagecontainer"><img src="images/myosotis.jpg" alt=""></div>
-                            <h2>Myosotis.</h2>
-                            <p>Interactieve lamp ontworpen voor ouderen die dementie hebben.</p>
-                        </a>
-                    </article>
-                    <article class="content-items">
-                        <a href="#">
-                            <div class="imagecontainer"><img src="images/medialounge.jpg" alt=""></div>
-                            <h2>Project: Beyond.</h2>
-                            <p>Ontwerp voor het verbeteren van de medialounge zijn zitplaatsen.</p>
-                        </a>
-                    </article>
-                    <article class="content-items">
-                        <a href="#">
-                            <div class="imagecontainer"> <img src="images/Love-wall.gif" alt=""></div>
-                            <h2>Project: First Dates.</h2>
-                            <p>Ontwerp voor ontmoeten en daten van jonge Queers in de gay gemeenschap.</p>
-                        </a>
-                    </article>
-                </div>
             </section> -->
 
   </main>
