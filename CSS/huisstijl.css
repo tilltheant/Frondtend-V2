@@ -324,7 +324,7 @@ main article {
   padding: 0.5em;
 }
 
-#firstdates img[class="firstdatepic"]{
+#firstdates img[class="firstdatepic"] {
   padding: 0;
 }
 
@@ -584,6 +584,7 @@ SVG
 .st1:hover {
   fill: yellow;
 }
+
 /**********************
 https://9elements.com/blog/creating-an-animated-svg-neon-light-effect/
 ***********************/
@@ -676,8 +677,8 @@ https://9elements.com/blog/creating-an-animated-svg-neon-light-effect/
 .st9 {
   fill: #685900;
 }
-  /* https://codepen.io/pulpexploder/pen/ypYXwb */
 
+/* https://codepen.io/pulpexploder/pen/ypYXwb */
 .yes {
   animation: spring 1.5s infinite;
   animation-name: spring;
@@ -688,16 +689,35 @@ https://9elements.com/blog/creating-an-animated-svg-neon-light-effect/
   cursor: pointer;
 }
 
-    @keyframes spring {
-        0%   { transform: scale(1,1)      translateY(0); }
-        10%  { transform: scale(1.1,.9)   translateY(0); }
-        30%  { transform: scale(.9,1.1)   translateY(-100px); }
-        50%  { transform: scale(1.05,.95) translateY(0); }
-        57%  { transform: scale(1,1)      translateY(-7px); }
-        64%  { transform: scale(1,1)      translateY(0); }
-        100% { transform: scale(1,1)      translateY(0); }
-    }
+@keyframes spring {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
 
+  10% {
+    transform: scale(1.1, .9) translateY(0);
+  }
+
+  30% {
+    transform: scale(.9, 1.1) translateY(-100px);
+  }
+
+  50% {
+    transform: scale(1.05, .95) translateY(0);
+  }
+
+  57% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
 
 /**********************
 ***********************
@@ -789,7 +809,7 @@ input[type=date] {
   width: auto;
 }
 
-input[type=radio]:focus{
+input[type=radio]:focus {
   background-color: orange;
 }
 
@@ -805,8 +825,6 @@ fieldset {
   border-bottom: none;
   border-right: solid 2px grey;
 }
-
-
 
 @media(max-width: 90em) {
   footer section {
