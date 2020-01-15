@@ -321,6 +321,11 @@ main article {
 
 #firstdates h2 {
   font-family: 'Josefin Sans', sans-serif;
+  padding: 0.5em;
+}
+
+#firstdates img[class="firstdatepic"]{
+  padding: 0;
 }
 
 .fotoitemcontainer {
@@ -713,6 +718,17 @@ footer h1 {
   padding: 1em;
 }
 
+footer section div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer section div p {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 0.5em;
+}
+
 #textveld {
   display: block;
 }
@@ -790,10 +806,13 @@ fieldset {
   border-right: solid 2px grey;
 }
 
+
+
 @media(max-width: 90em) {
   footer section {
     display: flex;
     flex-flow: wrap;
+    justify-content: center;
   }
 }
 
